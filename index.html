@@ -1,0 +1,23 @@
+<nav id="tabs" aria-label="Main">
+  <button data-v="dashboard" class="on">Dashboard</button>
+  <button data-v="transactions">Transactions</button>
+  <button data-v="reports">Reports</button>
+</nav>
+<div class="card hero">
+  <h1 id="wHi">Welcome.</h1><p id="wDate"></p><p id="wMsg"></p>
+  <div class="trk"><b id="wBar"></b></div>
+  <input class="in" id="wName" placeholder="Your name">
+  <button class="btn" id="qE">Add expense</button>
+</div>
+<form id="form" novalidate>
+  <div class="seg" id="seg"><span class="pill"></span>
+    <button type="button" data-t="expense" class="on">Expense</button>
+    <button type="button" data-t="income">Income</button></div>
+  <input class="in" id="amount" type="number" min="0" step="0.01">
+  <input class="in" id="title" maxlength="60">
+  <select class="in" id="cat"></select>
+  <input class="in" id="date" type="date">
+  <button class="btn" type="submit">Add transaction</button>
+</form>
+<canvas id="cDon"></canvas>   <!-- Chart.js doughnut -->
+<table><tbody id="tbody"></tbody></table>   <!-- transaction history -->
