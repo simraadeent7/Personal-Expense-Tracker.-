@@ -1,0 +1,16 @@
+:root{--bg:#0B0F1A;--s1:#131A2A;--edge:#2A3550;--ind:#6C7CFF;--mint:#2DD4BF;
+      --inc:#34D399;--exp:#FB7185;--tx:#E8ECF5;--mu:#94A3B8;color-scheme:dark}
+body{background:radial-gradient(1200px 700px at 70% -10%,#17214a,var(--bg)) fixed;
+     color:var(--tx);font:15px/1.5 Inter,system-ui,sans-serif}
+#bg{position:fixed;inset:0;z-index:-1;pointer-events:none}     /* 3D canvas */
+.nav{position:sticky;top:0;display:flex;height:64px;backdrop-filter:blur(14px)}
+.card{background:rgba(19,26,42,.72);backdrop-filter:blur(14px);
+      border:1px solid var(--edge);border-radius:16px;padding:20px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g2{display:grid;grid-template-columns:7fr 5fr;gap:16px}
+.seg.inc .pill{transform:translateX(100%);background:var(--inc)}  /* toggle slide */
+.shake{animation:sh .3s}
+@keyframes sh{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+@media(max-width:900px){.g2{grid-template-columns:1fr}}
+@media(max-width:720px){#tabs{position:fixed;bottom:0;left:0;right:0}}   /* bottom tab bar */
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
